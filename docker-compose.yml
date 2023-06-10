@@ -6,7 +6,8 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - type: bind
-        source: ./app
-        target: /usr/src/app
+      - ./app:/usr/src/app
+      - node_modules:/usr/src/app/node_modules
     tty: true
+volumes:
+  node_modules:

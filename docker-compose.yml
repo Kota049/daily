@@ -1,12 +1,12 @@
-version: "3"
+version: "3.9"
 services:
   app:
-    image: node:20.3-slim
+    build:
+      context: .
     ports:
       - "3000:3000"
-    working_dir: /usr/src/app/my-app
     volumes:
       - type: bind
-        source: ./
+        source: ./app
         target: /usr/src/app
     tty: true

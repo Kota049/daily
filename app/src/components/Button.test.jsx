@@ -1,4 +1,4 @@
-import { screen, render, act } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import Button from "./Button";
 import getButton from "../tests/utils/getButton";
 import userEvent from "@testing-library/user-event";
@@ -12,13 +12,11 @@ describe("Button", () => {
     render(<Button message="message" />);
     expect(getButton("message")).not.toBeNull();
   });
-  it("set arg function to onclick", () => {
-    const action = jest.fn();
-    render(<Button message="message" action={action} />);
+  it("set arg function to onclick", async () => {
+    const fn = jest.fn();
+    render(<Button message="message" hoge={fn} />);
     const button = getButton("message");
-    act(() => {
-      userEvent.click(button);
-    });
-    expect(action).toHaveBeenCalled();
+    await userEvent.click(button);
+    expect(fn).toBeCalled();
   });
 });

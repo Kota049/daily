@@ -1,4 +1,8 @@
-const Button = ({ message = "button" }) => {
-  return <button>{message}</button>;
+const Button = ({ message = "button", hoge = () => {} }) => {
+  return (
+    <>
+      <button onClick={hoge}>{message}</button>
+    </>
+  );
 };
 export default Button;

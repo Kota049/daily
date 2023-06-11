@@ -9,4 +9,8 @@ describe("tweet button", () => {
     render(<Tweet />);
     expect(getButton("ツイート")).not.toBeNull();
   });
+  it("has 釣果投稿 button", () => {
+    render(<Tweet />);
+    expect(getButton("釣果投稿")).not.toBeNull();
+  });
 });

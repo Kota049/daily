@@ -1,5 +1,10 @@
 import { memo } from "react";
+import Button from "./Button";
 const Tweet = () => {
-  return;
+  return (
+    <>
+      <Button message="ツイート" />
+    </>
+  );
 };
 export default memo(Tweet);

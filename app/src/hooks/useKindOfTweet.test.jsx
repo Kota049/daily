@@ -18,4 +18,15 @@ describe("useKindOfTweet", () => {
     });
     expect(result.current.kindOfTweet).toBe("report");
   });
+  it("return updater toggling state", () => {
+    const { result } = renderHook(useKindOfTweet);
+    act(() => {
+      result.current.setKindOfTweet();
+    });
+    expect(result.current.kindOfTweet).toBe("report");
+    act(() => {
+      result.current.setKindOfTweet();
+    });
+    expect(result.current.kindOfTweet).toBe("tweet");
+  });
 });

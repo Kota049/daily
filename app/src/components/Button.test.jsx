@@ -19,4 +19,8 @@ describe("Button", () => {
     await userEvent.click(getButton(message));
     expect(fn).toBeCalled();
   });
+  it("set arg to disabled", () => {
+    render(<Button isDisabled={true} />);
+    expect(getButton("button").getAttribute("disabled")).toBe(true);
+  });
 });

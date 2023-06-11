@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import Tweet from "./Tweet";
 import getButton from "../tests/utils/getButton";
 import userEvent from "@testing-library/user-event";
@@ -27,5 +27,11 @@ describe("tweet and report buttons", () => {
     await userEvent.click(reportButton);
     expect(tweetButton.getAttribute("disabled")).toBeNull();
     expect(reportButton.getAttribute("disabled")).not.toBeNull();
+  });
+  describe("form", () => {
+    it("has form", () => {
+      render(<Tweet />);
+      expect(screen.getByRole("form")).not.toBeNull();
+    });
   });
 });

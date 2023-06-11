@@ -13,4 +13,9 @@ describe("useKindOfTweet", () => {
     const [state] = useKindOfTweet();
     expect(state).toBe("tweet");
   });
+  it("return function updating state", () => {
+    const [state, updater] = useKindOfTweet();
+    updater();
+    expect(state).toBe("report");
+  });
 });

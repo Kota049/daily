@@ -1,4 +1,4 @@
 const useKindOfTweet = () => {
-  return ["", () => {}];
+  return ["tweet", () => {}];
 };
 export default useKindOfTweet;

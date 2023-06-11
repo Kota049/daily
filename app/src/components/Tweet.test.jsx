@@ -13,4 +13,9 @@ describe("tweet and report buttons", () => {
     render(<Tweet />);
     expect(getButton("釣果投稿")).not.toBeNull();
   });
+  it("report button is disabled and tweet button is enabled", () => {
+    render(<Tweet />);
+    expect(getButton("ツイート").getAttribute("disabled")).toBeNull();
+    expect(getButton("釣果投稿").getAttribute("disabled")).not.toBeNull();
+  });
 });

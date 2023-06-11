@@ -1,4 +1,4 @@
 const Button = () => {
-  return;
+  return <button>button</button>;
 };
 export default Button;

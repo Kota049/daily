@@ -4,7 +4,7 @@ import getButton from "../tests/utils/getButton";
 it("suit", () => {
   expect(1).toBe(1);
 });
-describe("tweet button", () => {
+describe("tweet and report buttons", () => {
   it("has ツイートbutton", () => {
     render(<Tweet />);
     expect(getButton("ツイート")).not.toBeNull();

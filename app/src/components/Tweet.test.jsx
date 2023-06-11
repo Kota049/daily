@@ -1,8 +1,7 @@
-import { render, screen } from "@testing-library/react";
+import { act, render, screen } from "@testing-library/react";
 import Tweet from "./Tweet";
 import getButton from "../tests/utils/getButton";
 import userEvent from "@testing-library/user-event";
-import { act } from "react-dom/test-utils";
 it("suit", () => {
   expect(1).toBe(1);
 });

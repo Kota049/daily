@@ -4,6 +4,7 @@ const Tweet = () => {
   return (
     <>
       <Button message="ツイート" />
+      <Button message="釣果投稿" />
     </>
   );
 };

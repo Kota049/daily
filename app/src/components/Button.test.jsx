@@ -15,7 +15,7 @@ describe("Button", () => {
   });
   it("set arg function to onclick", async () => {
     const fn = jest.fn();
-    render(<Button message={message} hoge={fn} />);
+    render(<Button message={message} clickEvent={fn} />);
     await userEvent.click(getButton(message));
     expect(fn).toBeCalled();
   });

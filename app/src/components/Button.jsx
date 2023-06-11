@@ -1,14 +1,16 @@
+import { memo } from "react";
+
 const Button = ({
   message = "button",
-  hoge = () => {},
+  clickEvent = () => {},
   isDisabled = false,
 }) => {
   return (
     <>
-      <button onClick={hoge} disabled={isDisabled}>
+      <button onClick={clickEvent} disabled={isDisabled}>
         {message}
       </button>
     </>
   );
 };
-export default Button;
+export default memo(Button);

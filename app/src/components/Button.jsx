@@ -1,4 +1,4 @@
-const Button = () => {
-  return <button>button</button>;
+const Button = ({ message = "button" }) => {
+  return <button>{message}</button>;
 };
 export default Button;

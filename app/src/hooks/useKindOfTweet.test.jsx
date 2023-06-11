@@ -5,7 +5,7 @@ describe("useKindOfTweet", () => {
   it("return string and function", () => {
     const { result } = renderHook(useKindOfTweet);
     expect(typeof result.current.kindOfTweet).toBe("string");
-    expect(typeof result.current.setKindOfTweet).toBe("function");
+    expect(typeof result.current.changeKind).toBe("function");
   });
   it("return tweet as state", () => {
     const { result } = renderHook(useKindOfTweet);
@@ -14,18 +14,18 @@ describe("useKindOfTweet", () => {
   it("return function updating state", () => {
     const { result } = renderHook(useKindOfTweet);
     act(() => {
-      result.current.setKindOfTweet();
+      result.current.changeKind();
     });
     expect(result.current.kindOfTweet).toBe("report");
   });
   it("return updater toggling state", () => {
     const { result } = renderHook(useKindOfTweet);
     act(() => {
-      result.current.setKindOfTweet();
+      result.current.changeKind();
     });
     expect(result.current.kindOfTweet).toBe("report");
     act(() => {
-      result.current.setKindOfTweet();
+      result.current.changeKind();
     });
     expect(result.current.kindOfTweet).toBe("tweet");
   });

@@ -7,7 +7,7 @@ const useKindOfTweet = () => {
   };
   return {
     kindOfTweet: kindOfTweet ? "tweet" : "report",
-    setKindOfTweet: updating,
+    changeKind: updating,
   };
 };
 export default useKindOfTweet;

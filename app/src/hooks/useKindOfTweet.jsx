@@ -1,4 +1,10 @@
+import { useState } from "react";
+
 const useKindOfTweet = () => {
-  return ["tweet", () => {}];
+  const [kindOfTweet, setKindOfTweet] = useState("tweet");
+  const updating = () => {
+    setKindOfTweet("report");
+  };
+  return [kindOfTweet, updating];
 };
 export default useKindOfTweet;

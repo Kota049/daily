@@ -4,8 +4,8 @@ const Tweet = () => {
   const isDisable = true;
   return (
     <>
-      <Button message="ツイート" isDisabled={!isDisable} />
-      <Button message="釣果投稿" isDisabled={isDisable} />
+      <Button message="ツイート" isDisabled={isDisable} />
+      <Button message="釣果投稿" isDisabled={!isDisable} />
     </>
   );
 };

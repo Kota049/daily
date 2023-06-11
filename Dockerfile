@@ -7,4 +7,4 @@ COPY ./app/package.json /usr/src/app
 RUN chown node:node .
 USER node
 
-RUN npm ci
+# RUN npm ci

@@ -1,7 +1,13 @@
-const Button = ({ message = "button", hoge = () => {} }) => {
+const Button = ({
+  message = "button",
+  hoge = () => {},
+  isDisabled = false,
+}) => {
   return (
     <>
-      <button onClick={hoge}>{message}</button>
+      <button onClick={hoge} disabled={isDisabled}>
+        {message}
+      </button>
     </>
   );
 };

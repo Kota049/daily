@@ -21,6 +21,6 @@ describe("Button", () => {
   });
   it("set arg to disabled", () => {
     render(<Button isDisabled={true} />);
-    expect(getButton("button").getAttribute("disabled")).toBe(true);
+    expect(getButton("button").getAttribute("disabled")).not.toBeNull();
   });
 });

@@ -3,8 +3,8 @@ import Button from "./Button";
 const Tweet = () => {
   return (
     <>
-      <Button message="ツイート" />
-      <Button message="釣果投稿" />
+      <Button message="ツイート" isDisabled={false} />
+      <Button message="釣果投稿" isDisabled={true} />
     </>
   );
 };

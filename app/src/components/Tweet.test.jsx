@@ -1,4 +1,4 @@
-import { act, render, screen, within } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import Tweet from "./Tweet";
 import getButton from "../tests/utils/getButton";
 import userEvent from "@testing-library/user-event";

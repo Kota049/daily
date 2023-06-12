@@ -15,7 +15,9 @@ const Tweet = () => {
         isDisabled={"report" === kindOfTweet}
         clickEvent={changeKind}
       />
-      <form role="form"></form>
+      <form role="form">
+        <textarea></textarea>
+      </form>
     </>
   );
 };

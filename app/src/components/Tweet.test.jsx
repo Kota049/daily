@@ -1,4 +1,4 @@
-import { act, render, screen } from "@testing-library/react";
+import { act, render, screen, within } from "@testing-library/react";
 import Tweet from "./Tweet";
 import getButton from "../tests/utils/getButton";
 import userEvent from "@testing-library/user-event";
@@ -23,6 +23,7 @@ describe("tweet and report buttons", () => {
     render(<Tweet />);
     const reportButton = getButton("釣果投稿");
     const tweetButton = getButton("ツイート");
+    // todo:なんかact周りでエラーが出ているっぽい
     await userEvent.click(reportButton);
     expect(tweetButton.getAttribute("disabled")).toBeNull();
     expect(reportButton.getAttribute("disabled")).not.toBeNull();
@@ -31,6 +32,12 @@ describe("tweet and report buttons", () => {
     it("has form", () => {
       render(<Tweet />);
       expect(screen.getByRole("form")).not.toBeNull();
+    });
+    it("has textarea", () => {
+      render(<Tweet />);
+      expect(
+        within(screen.getByRole("form")).getByRole("textbox")
+      ).not.toBeNull();
     });
   });
 });

@@ -2,9 +2,6 @@ import { render, screen, within } from "@testing-library/react";
 import Tweet from "./Tweet";
 import getButton from "../tests/utils/getButton";
 import userEvent from "@testing-library/user-event";
-it("suit", () => {
-  expect(1).toBe(1);
-});
 describe("tweet and report buttons", () => {
   it("has ツイートbutton", () => {
     render(<Tweet />);
@@ -41,9 +38,9 @@ describe("tweet and report buttons", () => {
     });
     it("has button", () => {
       render(<Tweet />);
-      expect(
-        within(screen.getByRole("form")).getByRole("button")
-      ).not.toBeNull();
+      const button = within(screen.getByRole("form")).getByRole("button");
+      expect(button).not.toBeNull();
+      expect(button.textContent).toBe("投稿");
     });
   });
 });

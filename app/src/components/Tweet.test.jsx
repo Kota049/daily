@@ -39,5 +39,11 @@ describe("tweet and report buttons", () => {
         within(screen.getByRole("form")).getByRole("textbox")
       ).not.toBeNull();
     });
+    it("has button", () => {
+      render(<Tweet />);
+      expect(
+        within(screen.getByRole("form")).getByRole("button")
+      ).not.toBeNull();
+    });
   });
 });

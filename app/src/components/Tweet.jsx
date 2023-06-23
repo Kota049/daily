@@ -17,6 +17,7 @@ const Tweet = () => {
       />
       <form role="form">
         <textarea></textarea>
+        <button></button>
       </form>
     </>
   );

@@ -11,7 +11,7 @@ describe("suit", () => {
   it("setInput update input", () => {
     const { result } = renderHook(useInput);
     act(() => {
-      result.current.setInput();
+      result.current.setInput("a");
     });
     expect(result.current.input).toBe("a");
   });

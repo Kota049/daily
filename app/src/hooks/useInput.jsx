@@ -1,4 +1,7 @@
+import { useState } from "react";
+
 const useInput = () => {
-  return { input: "", setInput: () => {} };
+  const [input, setInput] = useState("");
+  return { input: input, setInput: setInput };
 };
 export default useInput;

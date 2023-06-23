@@ -1,4 +1,10 @@
+import Tweet from "./components/Tweet";
+
 const App = () => {
-  return <h1>Hello world</h1>;
+  return (
+    <>
+      <Tweet />
+    </>
+  );
 };
 export default App;

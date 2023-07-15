@@ -1,10 +1,13 @@
 import { memo } from "react";
 import Button from "./Button";
 import useKindOfTweet from "../hooks/useKindOfTweet";
+import useInput from "../hooks/useInput";
 const Tweet = () => {
   const { kindOfTweet, changeKind } = useKindOfTweet();
+  const { input, setInput } = useInput();
   return (
     <>
+      <h1>{input}</h1>
       <Button
         message="ツイート"
         isDisabled={"tweet" === kindOfTweet}
@@ -16,7 +19,12 @@ const Tweet = () => {
         clickEvent={changeKind}
       />
       <form role="form">
-        <textarea></textarea>
+        <textarea
+          onChange={(event) => {
+            event.preventDefault();
+            setInput(event.target.value);
+          }}
+        ></textarea>
         <button type="submit">投稿</button>
       </form>
     </>

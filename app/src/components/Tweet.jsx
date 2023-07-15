@@ -17,7 +17,7 @@ const Tweet = () => {
       />
       <form role="form">
         <textarea></textarea>
-        <button>投稿</button>
+        <button type="submit">投稿</button>
       </form>
     </>
   );

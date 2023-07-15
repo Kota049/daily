@@ -7,7 +7,6 @@ const Tweet = () => {
   const { input, setInput } = useInput();
   return (
     <>
-      <h1>{input}</h1>
       <Button
         message="ツイート"
         isDisabled={"tweet" === kindOfTweet}
@@ -18,7 +17,13 @@ const Tweet = () => {
         isDisabled={"report" === kindOfTweet}
         clickEvent={changeKind}
       />
-      <form role="form">
+      <form
+        role="form"
+        onSubmit={() => {
+          // TODO:あとで書き換える
+          alert(input);
+        }}
+      >
         <textarea
           onChange={(event) => {
             event.preventDefault();

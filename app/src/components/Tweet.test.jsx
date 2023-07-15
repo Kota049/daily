@@ -42,5 +42,10 @@ describe("tweet and report buttons", () => {
       expect(button).not.toBeNull();
       expect(button.textContent).toBe("投稿");
     });
+    it("button ha submit attribute", () => {
+      render(<Tweet />);
+      const button = within(screen.getByRole("form")).getByRole("button");
+      expect(button.getAttribute("type").toLowerCase()).toBe("submit");
+    });
   });
 });

@@ -1,5 +1,5 @@
 const useRegisterArticle = () => {
-  return;
+  return "ok";
 };
 
 export default useRegisterArticle;
